@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo -v
+
 echo Confinguring defaults
 
 # Avoid creating .DS_Store files on network or USB volumes
@@ -41,4 +43,29 @@ else
     $(xcode-select --install)
 fi
 
+sudo xcodebuild -license accept
+
+sudo port selfupdate
+
+sudo port install git +credential_osxkeychain+doc+diff_highlight
+
+sudo port install vim
+git clone https://github.com/petermisak/.vim.git ~/.vim-mine
+ln -sf ~/.vim-mine ~/.vim
+ln -sf $HOME/.vim/vimrc $HOME/.vimrc
+cd $HOME/.vim
+git submodule update --init
+cd -
+
+echo "Installing fish shell"
+
+sudo port install fish
+sudo chpass -s /opt/local/bin/fish ${USER}
+sudo sh -c 'echo /opt/local/bin/fish >> /etc/shells'
+
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
 

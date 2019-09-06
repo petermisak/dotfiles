@@ -67,6 +67,7 @@ git config --global include.path $HOME/.gitaliases
 git config --global core.editor vim
 git config --global color.ui auto
 git config --global credential.helper osxkeychain
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -107,3 +108,5 @@ sudo port install nodejs12 npm6
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
+
+npm install -g n diff-so-fancy

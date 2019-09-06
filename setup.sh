@@ -48,6 +48,8 @@ sudo xcodebuild -license accept
 sudo port selfupdate
 
 sudo port install git +credential_osxkeychain+doc+diff_highlight
+sudo port install bash
+sudo port install fzf
 
 sudo port install vim
 git clone https://github.com/petermisak/.vim.git ~/.vim-mine
@@ -57,14 +59,41 @@ cd $HOME/.vim
 git submodule update --init
 cd -
 
+ln -sf $(pwd)/git/.gitaliases $HOME/.gitaliases
+
+git config --global include.path $HOME/.gitaliases
+git config --global core.editor vim
+git config --global color.ui auto
+git config --global credential.helper osxkeychain
+
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 echo "Installing fish shell"
 
 sudo port install fish
 sudo chpass -s /opt/local/bin/fish ${USER}
 sudo sh -c 'echo /opt/local/bin/fish >> /etc/shells'
 
+# ln -sf $(pwd)/fish/functions "$HOME/.config/fish"
+ln -sf $(pwd)/fish/config.fish "$HOME/.config/fish/config.fish"
+
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
+
+fish -c "fisher add barnybug/docker-fish-completion"
+fish -c "fisher add jethrokuan/fzf"
+fish -c "fisher add jethrokuan/z"
+fish -c "fisher add matchai/spacefish"
+fish -c "fisher add reitzig/sdkman-for-fish"
+
+code --install-extension ccy.ayu-adaptive
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension vscode-icons-team.vscode-icons
+
+ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+

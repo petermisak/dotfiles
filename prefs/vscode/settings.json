@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.statusBar.visible": true,
-    "workbench.iconTheme": "ayu",
+    "workbench.iconTheme": "vscode-icons",
     "editor.lineHeight": 16,
     "editor.fontFamily": "Menlo for Powerline, Monaco, 'Courier New', monospace",
     // Enables font ligatures

@@ -2,7 +2,7 @@
 macOS Dotfiles
 
 # Prerequisites
-Xcode 
+Xcode
 Visual Studio Code
 iTerm2
 Menlo for Powerline
@@ -16,4 +16,3 @@ Microsoft Office 365 Apps
 # Git
 `git config --global user.name "Peter Misak"`
 `git config --global user.email "Your_Mail@...com"`
-

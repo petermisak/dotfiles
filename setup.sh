@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+JAVA_VERSION="8.0.222-zulu"
+
 sudo -v
 
 echo Confinguring defaults
@@ -97,3 +99,11 @@ code --install-extension vscode-icons-team.vscode-icons
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 
+sdk install java $JAVA_VERSION
+sdk install maven
+
+sudo port install nodejs12 npm6
+
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+sudo chown -R $USER /opt/local/lib/node_modules

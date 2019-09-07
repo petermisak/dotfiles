@@ -25,3 +25,14 @@ My macOS setup with fish, VS Code, Java, Node
 git config --global user.name "Peter Misak"
 git config --global user.email "Your_Mail@...com"
 ```
+
+## Hostname
+From <https://apple.stackexchange.com/questions/287760/set-the-hostname-computer-name-for-macos>:
+```bash
+sudo scutil --set HostName <new host name>
+sudo scutil --set LocalHostName <new host name>
+sudo scutil --set ComputerName <new name>
+dscacheutil -flushcache
+```
+Restart your Mac afterwards.
+

@@ -110,3 +110,4 @@ npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
 npm install -g n diff-so-fancy
+

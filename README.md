@@ -11,7 +11,7 @@ My macOS setup with fish, VS Code, Java, Node
 # Other software
 * [Docker Desktop for Mac](https://hub.docker.com)
 * [1Password](https://1password.com/downloads/mac/)
-* [Alfred] (https://www.alfredapp.com)
+* [Alfred](https://www.alfredapp.com)
 * [iStat Menus](https://bjango.com/mac/istatmenus/)
 * [Spark](https://apps.apple.com/sk/app/spark-email-app-by-readdle/id1176895641?mt=12)
 * [Microsoft Office 365 Apps](http://office.com/)

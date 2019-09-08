@@ -18,6 +18,9 @@ My macOS setup with fish, VS Code, Java, Node
 * [Carbon Copy Cloner](https://bombich.com/download)
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox/app/) - To install IntelliJ IDEA
 * [SQL Developer](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/)
+* [Magnet](https://apps.apple.com/sk/app/magnet/id441258766?mt=12)
+* [Transmit](https://panic.com/transmit/#download)
+* [Transmission](https://transmissionbt.com)
 
 # Additional config
 ## Git

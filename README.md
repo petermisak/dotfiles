@@ -21,6 +21,8 @@ My macOS setup with fish, VS Code, Java, Node
 * [Magnet](https://apps.apple.com/sk/app/magnet/id441258766?mt=12)
 * [Transmit](https://panic.com/transmit/#download)
 * [Transmission](https://transmissionbt.com)
+* [Bear](https://apps.apple.com/sk/app/bear/id1091189122?mt=12)
+* [Sourcetree](https://www.sourcetreeapp.com)
 
 # Additional config
 ## Git

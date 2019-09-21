@@ -23,6 +23,7 @@ My macOS setup with fish, VS Code, Java, Node
 * [Transmission](https://transmissionbt.com)
 * [Bear](https://apps.apple.com/sk/app/bear/id1091189122?mt=12)
 * [Sourcetree](https://www.sourcetreeapp.com)
+* [App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner)
 
 # Additional config
 ## Git

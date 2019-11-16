@@ -13,3 +13,6 @@ set -xg PATH ~/.npm-global/bin $PATH
 # Locale fix
 set -xg LC_CTYPE en_US.UTF-8
 
+# Enable Starship Prompt
+eval (starship init fish)
+

@@ -90,7 +90,6 @@ end
 fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add jethrokuan/fzf"
 fish -c "fisher add jethrokuan/z"
-fish -c "fisher add matchai/spacefish"
 fish -c "fisher add reitzig/sdkman-for-fish"
 
 code --install-extension ccy.ayu-adaptive
@@ -111,4 +110,10 @@ npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
 npm install -g n diff-so-fancy
+
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install starship
+brew install azure-cli
 

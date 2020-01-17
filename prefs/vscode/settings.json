@@ -3,7 +3,7 @@
     "workbench.statusBar.visible": true,
     "workbench.iconTheme": "vscode-icons",
     "editor.lineHeight": 16,
-    "editor.fontFamily": "Menlo for Powerline, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "SF Mono Powerline, Menlo for Powerline, Monaco, 'Courier New', monospace",
     // Enables font ligatures
     // "editor.fontLigatures": true,
     // Controls if file decorations should use badges.

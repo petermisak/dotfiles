@@ -6,6 +6,7 @@ My macOS setup with fish, VS Code, Java, Node
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [iTerm2](https://www.iterm2.com)
 * [Menlo for Powerline](https://github.com/abertsch/Menlo-for-Powerline)
+* [SF Mono for Powerline](https://github.com/Twixes/SF-Mono-Powerline)
 * [MacPorts](https://www.macports.org/install.php)
 
 # Other software

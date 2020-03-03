@@ -91,6 +91,7 @@ fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add jethrokuan/fzf"
 fish -c "fisher add jethrokuan/z"
 fish -c "fisher add reitzig/sdkman-for-fish"
+fish -c "fisher add edc/bass"
 
 code --install-extension ccy.ayu-adaptive
 code --install-extension ms-azuretools.vscode-docker

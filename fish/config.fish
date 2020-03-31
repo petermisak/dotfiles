@@ -32,3 +32,33 @@ eval (starship init fish)
 # Base16 Shell
 eval sh $HOME/.config/oceanic-next-shell/oceanic-next.dark.sh
 
+# Base16 OceanicNext
+# Author: https://github.com/voronianski/oceanic-next-color-scheme
+
+function _gen_fzf_default_opts
+  set color00 '#1B2B34'
+  set color01 '#343D46'
+  set color02 '#4F5B66'
+  set color03 '#65737E'
+  set color04 '#A7ADBA'
+  set color05 '#C0C5CE'
+  set color06 '#CDD3DE'
+  set color07 '#D8DEE9'
+  set color08 '#EC5f67'
+  set color09 '#F99157'
+  set color0A '#FAC863'
+  set color0B '#99C794'
+  set color0C '#5FB3B3'
+  set color0D '#6699CC'
+  set color0E '#C594C5'
+  set color0F '#AB7967'
+
+  echo "--black
+  --height 40% 
+  --color=bg+:$color00,bg:$color00,spinner:$color0C,hl:$color0D
+  --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
+  --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
+end
+
+set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
+

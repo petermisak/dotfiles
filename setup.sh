@@ -61,6 +61,8 @@ cd $HOME/.vim
 git submodule update --init
 cd -
 
+git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
+
 ln -sf $(pwd)/git/.gitaliases $HOME/.gitaliases
 
 git config --global include.path $HOME/.gitaliases

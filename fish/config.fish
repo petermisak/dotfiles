@@ -21,7 +21,7 @@ set -x KUBECONFIG $HOME/.kube/config $KUBECONFIG
 # Path to node global (the dir was created manually by mkdir ~/.npm-global ;  npm config set prefix '~/.npm-global')
 set -xg PATH ~/.npm-global/bin $PATH
 
-# Cargo  
+# Cargo
 set -xg PATH $HOME/.cargo/bin $PATH
 
 # User scripts
@@ -30,10 +30,33 @@ set -xg PATH $HOME/bin $PATH
 eval (starship init fish)
 
 # Base16 Shell
-eval sh $HOME/.config/oceanic-next-shell/oceanic-next.dark.sh
+# eval sh $HOME/.config/oceanic-next-shell/oceanic-next.dark.sh
 
 # Base16 OceanicNext
 # Author: https://github.com/voronianski/oceanic-next-color-scheme
+
+# Fish syntax highlighting
+set -g fish_color_autosuggestion '555'  'brblack'
+set -g fish_color_cancel -r
+set -g fish_color_command --bold
+set -g fish_color_comment red
+set -g fish_color_cwd green
+set -g fish_color_cwd_root red
+set -g fish_color_end brmagenta
+set -g fish_color_error brred
+set -g fish_color_escape 'bryellow'  '--bold'
+set -g fish_color_history_current --bold
+set -g fish_color_host normal
+set -g fish_color_match --background=brblue
+set -g fish_color_normal normal
+set -g fish_color_operator bryellow
+set -g fish_color_param cyan
+set -g fish_color_quote yellow
+set -g fish_color_redirection brblue
+set -g fish_color_search_match 'bryellow'  '--background=brblack'
+set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
+set -g fish_color_user brgreen
+set -g fish_color_valid_path --underline
 
 function _gen_fzf_default_opts
   set color00 '#1B2B34'
@@ -54,11 +77,12 @@ function _gen_fzf_default_opts
   set color0F '#AB7967'
 
   echo "--black
-  --height 40% 
+  --height 40%
   --color=bg+:$color00,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
   --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 end
 
-set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
+# set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
+# set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
 

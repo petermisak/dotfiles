@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.statusBar.visible": true,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.lineHeight": 16,
     "editor.fontFamily": "SF Mono Powerline, Menlo for Powerline, Monaco, 'Courier New', monospace",
     // Enables font ligatures
@@ -24,5 +24,12 @@
         "editor.tabSize": 2,
         "editor.defaultFormatter": "HookyQR.beautify"
     },
-    "workbench.colorTheme": "Soft Colors"
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "material-icon-theme.opacity": 1,
+    "material-icon-theme.activeIconPack": "angular",
+    "material-icon-theme.folders.color": "#90a4ae",
+    "material-icon-theme.saturation": 1,
+    "workbench.colorCustomizations": {},
+    "materialTheme.accent": "Remove accents"
 }

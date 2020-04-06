@@ -83,6 +83,15 @@ function _gen_fzf_default_opts
   --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 end
 
+# Colored man pages
+set -x LESS_TERMCAP_mb (printf "\e[01;31m")
+set -x LESS_TERMCAP_md (printf "\e[01;31m")
+set -x LESS_TERMCAP_me (printf "\e[0m")
+set -x LESS_TERMCAP_se (printf "\e[0m")
+set -x LESS_TERMCAP_so (printf "\e[01;44;33m")
+set -x LESS_TERMCAP_ue (printf "\e[0m")
+set -x LESS_TERMCAP_us (printf "\e[01;32m")
+
 # set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
 # set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
 

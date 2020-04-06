@@ -3,9 +3,9 @@
     "workbench.statusBar.visible": true,
     "workbench.iconTheme": "material-icon-theme",
     "editor.lineHeight": 16,
-    "editor.fontFamily": "SF Mono Powerline, Menlo for Powerline, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "JetBrains Mono, SF Mono Powerline, Menlo for Powerline, Monaco, 'Courier New', monospace",
     // Enables font ligatures
-    // "editor.fontLigatures": true,
+    "editor.fontLigatures": true,
     // Controls if file decorations should use badges.
     "explorer.decorations.badges": false,
     "editor.rulers": [

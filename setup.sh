@@ -121,6 +121,10 @@ npm install -g n diff-so-fancy
 brew install starship
 brew install azure-cli
 
+# Fira Code font
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
 # JetBrains Mono font
 brew tap homebrew/cask-fonts
 brew cask install font-jetbrains-mono

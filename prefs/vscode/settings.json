@@ -2,8 +2,7 @@
 {
     "workbench.statusBar.visible": true,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.lineHeight": 16,
-    "editor.fontFamily": "JetBrains Mono, SF Mono Powerline, Menlo for Powerline, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "JetBrains Mono, SF Mono Powerline, Menlo for Powerline, monospace",
     // Enables font ligatures
     "editor.fontLigatures": true,
     // Controls if file decorations should use badges.
@@ -25,11 +24,14 @@
         "editor.defaultFormatter": "HookyQR.beautify"
     },
     "diffEditor.ignoreTrimWhitespace": true,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
     "material-icon-theme.opacity": 1,
     "material-icon-theme.activeIconPack": "angular",
     "material-icon-theme.folders.color": "#90a4ae",
     "material-icon-theme.saturation": 1,
     "workbench.colorCustomizations": {},
-    "materialTheme.accent": "Remove accents"
+    "python.jediEnabled": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.fontSize": 13,
+    "terminal.integrated.fontSize": 13,
+    "debug.console.fontSize": 13
 }

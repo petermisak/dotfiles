@@ -27,8 +27,6 @@ set -xg PATH $HOME/.cargo/bin $PATH
 # User scripts
 set -xg PATH $HOME/bin $PATH
 
-eval (starship init fish)
-
 # Base16 Shell
 # eval sh $HOME/.config/oceanic-next-shell/oceanic-next.dark.sh
 
@@ -95,3 +93,4 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 # set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
 # set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
 
+starship init fish | source

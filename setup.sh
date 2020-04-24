@@ -133,3 +133,6 @@ brew cask install font-fira-code
 brew tap homebrew/cask-fonts
 brew cask install font-jetbrains-mono
 
+# Kubelogin
+brew install int128/kubelogin/kubelogin
+

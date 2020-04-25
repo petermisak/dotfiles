@@ -96,6 +96,8 @@ fish -c "fisher add reitzig/sdkman-for-fish"
 fish -c "fisher add edc/bass"
 fish -c "fisher add jhillyerd/plugin-git"
 
+ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
+
 # Some Docker and K8s goodies
 fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add evanlucas/fish-kubectl-completions"

@@ -16,7 +16,7 @@ set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
 
 # Kubernetes
-set -x KUBECONFIG $HOME/.kube/config $KUBECONFIG
+set -x KUBECONFIG $HOME/.kube/config
 
 # Path to node global (the dir was created manually by mkdir ~/.npm-global ;  npm config set prefix '~/.npm-global')
 set -xg PATH ~/.npm-global/bin $PATH
@@ -57,24 +57,24 @@ set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
 function _gen_fzf_default_opts
-  set color00 '#1B2B34'
-  set color01 '#343D46'
-  set color02 '#4F5B66'
-  set color03 '#65737E'
-  set color04 '#A7ADBA'
-  set color05 '#C0C5CE'
-  set color06 '#CDD3DE'
-  set color07 '#D8DEE9'
-  set color08 '#EC5f67'
-  set color09 '#F99157'
-  set color0A '#FAC863'
-  set color0B '#99C794'
-  set color0C '#5FB3B3'
-  set color0D '#6699CC'
-  set color0E '#C594C5'
-  set color0F '#AB7967'
+    set color00 '#1B2B34'
+    set color01 '#343D46'
+    set color02 '#4F5B66'
+    set color03 '#65737E'
+    set color04 '#A7ADBA'
+    set color05 '#C0C5CE'
+    set color06 '#CDD3DE'
+    set color07 '#D8DEE9'
+    set color08 '#EC5f67'
+    set color09 '#F99157'
+    set color0A '#FAC863'
+    set color0B '#99C794'
+    set color0C '#5FB3B3'
+    set color0D '#6699CC'
+    set color0E '#C594C5'
+    set color0F '#AB7967'
 
-  echo "--black
+      echo "--black
   --height 40%
   --color=bg+:$color00,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
@@ -92,5 +92,20 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 
 # set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
 # set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
+function pcp_on -d "Set PCP kubeconfig"
+    set PCP_KUBECONFIG "$HOME/.kube/pcp.config"
+
+    if not test -z "$PCP_KUBECONFIG"; and not string match -q "*$PCP_KUBECONFIG*" $KUBECONFIG
+        set -xg KUBECONFIG $KUBECONFIG:$PCP_KUBECONFIG
+    end
+end
+
+function pcp_off -d "Unset PCP kubeconfig"
+    set PCP_KUBECONFIG "$HOME/.kube/pcp.config"
+
+    if not test -z "$PCP_KUBECONFIG"; and string match -q "*$PCP_KUBECONFIG*" $KUBECONFIG
+        set -xg KUBECONFIG (string replace -r "\:$PCP_KUBECONFIG" "" -- $KUBECONFIG)
+    end
+end
 
 starship init fish | source

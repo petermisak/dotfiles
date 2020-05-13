@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.statusBar.visible": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "Monokai Pro Icons",
     "editor.fontFamily": "JetBrains Mono, SF Mono Powerline, Menlo for Powerline, monospace",
     // Enables font ligatures
     // "editor.fontLigatures": false,
@@ -30,7 +30,7 @@
     "material-icon-theme.saturation": 1,
     "workbench.colorCustomizations": {},
     "python.jediEnabled": false,
-    "workbench.colorTheme": "Ayu One",
+    "workbench.colorTheme": "Atom One Light",
     "editor.fontSize": 13,
     "terminal.integrated.fontSize": 13,
     "debug.console.fontSize": 13

@@ -138,3 +138,12 @@ brew cask install font-jetbrains-mono
 # Kubelogin
 brew install int128/kubelogin/kubelogin
 
+# Helm
+brew install helm@2
+brew install helm
+
+cd /usr/local/bin
+ln -s /usr/local/opt/helm@2/bin/tiller tiller
+ln -s /usr/local/opt/helm@2/bin/helm helm2
+ln -s helm helm3
+

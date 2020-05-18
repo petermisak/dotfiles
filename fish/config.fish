@@ -56,6 +56,8 @@ set -xg PATH $HOME/bin $PATH
 #set -g fish_color_user brgreen
 #set -g fish_color_valid_path --underline
 
+set -g fish_color_search_match 'black'  '--background=brgreen'
+
 function _gen_fzf_default_opts
     set color00 '#1B2B34'
     set color01 '#343D46'

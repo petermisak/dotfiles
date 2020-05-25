@@ -144,6 +144,10 @@ brew install helm
 # I need Helm-2.14 in particular, so I need to use MacPorts
 sudo port install helm-2.14
 
+# Some additional goodies
+brew install speedtest-cli
+brew install neofetch
+
 cd /usr/local/bin
 ln -s helm helm3
 

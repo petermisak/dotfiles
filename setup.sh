@@ -70,6 +70,7 @@ git config --global core.editor vim
 git config --global color.ui auto
 git config --global credential.helper osxkeychain
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global pull.rebase false
 
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -122,6 +122,7 @@ npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
 npm install -g n diff-so-fancy
+mkdir ~/n
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

@@ -21,17 +21,15 @@ set -x KUBECONFIG $HOME/.kube/config
 # Path to node global (the dir was created manually by mkdir ~/.npm-global ;  npm config set prefix '~/.npm-global')
 set -xg PATH ~/.npm-global/bin $PATH
 
+# n
+set -xg N_PREFIX $HOME/n
+set -xg PATH $HOME/n/bin $PATH
+
 # Cargo
 set -xg PATH $HOME/.cargo/bin $PATH
 
 # User scripts
 set -xg PATH $HOME/bin $PATH
-
-# Base16 Shell
-# eval sh $HOME/.config/oceanic-next-shell/oceanic-next.dark.sh
-
-# Base16 OceanicNext
-# Author: https://github.com/voronianski/oceanic-next-color-scheme
 
 # Fish syntax highlighting
 #set -g fish_color_autosuggestion '555'  'brblack'

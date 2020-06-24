@@ -149,6 +149,7 @@ sudo port install helm-2.14
 # Some additional goodies
 brew install speedtest-cli
 brew install neofetch
+brew install ctop lazydocker
 
 cd /usr/local/bin
 ln -s helm helm3

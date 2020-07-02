@@ -69,7 +69,10 @@ git config --global include.path $HOME/.gitaliases
 git config --global core.editor vim
 git config --global color.ui auto
 git config --global credential.helper osxkeychain
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global core.pager "delta"
+git config --global delta.features "decorations line-numbers"
+git config --global delta.syntax-theme "Monokai Extended Light"
+git config --global color.diff.meta red
 git config --global pull.rebase false
 
 curl -s "https://get.sdkman.io" | bash
@@ -121,7 +124,7 @@ mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
-npm install -g n diff-so-fancy
+npm install -g n
 mkdir ~/n
 
 # Install Homebrew
@@ -129,6 +132,7 @@ mkdir ~/n
 
 brew install starship
 brew install azure-cli
+brew install git-delta
 
 # Fira Code font
 brew tap homebrew/cask-fonts

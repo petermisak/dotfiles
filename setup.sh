@@ -72,7 +72,7 @@ git config --global credential.helper osxkeychain
 git config --global core.pager "delta"
 git config --global delta.features "decorations line-numbers"
 git config --global delta.syntax-theme "Monokai Extended Light"
-git config --global color.diff.meta red
+git config --global color.diff.commit red
 git config --global pull.rebase false
 
 curl -s "https://get.sdkman.io" | bash

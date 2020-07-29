@@ -27,6 +27,10 @@ My macOS setup with fish, VS Code, Java, Node
 * [App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner)
 * [DaisyDisk](https://daisydiskapp.com)
 
+# Alfred Workflows
+* [Philips Hue Alfred Workflow](https://github.com/benknight/hue-alfred-workflow)
+* [Cheatsheet](https://github.com/mutdmour/alfred-workflow-cheatsheet)
+
 # Additional config
 ## Git
 ```bash

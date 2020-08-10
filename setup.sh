@@ -71,7 +71,7 @@ git config --global color.ui auto
 git config --global credential.helper osxkeychain
 git config --global core.pager "delta"
 git config --global delta.features "decorations line-numbers"
-git config --global delta.syntax-theme "Monokai Extended Light"
+git config --global delta.syntax-theme "OneHalfLight"
 git config --global color.diff.commit red
 git config --global pull.rebase false
 

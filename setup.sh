@@ -53,7 +53,7 @@ sudo port install git +credential_osxkeychain+doc+diff_highlight
 sudo port install bash
 sudo port install fzf
 
-sudo port install vim
+sudo port install vim +huge +python37
 git clone https://github.com/petermisak/.vim.git ~/.vim-mine
 ln -sf ~/.vim-mine ~/.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc

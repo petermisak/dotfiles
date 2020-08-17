@@ -112,6 +112,7 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension skyapps.fish-vscode
 code --install-extension eamodio.gitlens
+code --install-extension humao.rest-client
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 

@@ -105,6 +105,7 @@ ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 # Some Docker and K8s goodies
 fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add evanlucas/fish-kubectl-completions"
+fish -c "fisher add DrPhil/kubectl-fish-abbr"
 
 code --install-extension ccy.ayu-adaptive
 code --install-extension ms-azuretools.vscode-docker

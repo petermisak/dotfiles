@@ -135,6 +135,7 @@ mkdir ~/n
 brew install starship
 brew install azure-cli
 brew install git-delta
+brew install watch
 
 # Fira Code font
 brew tap homebrew/cask-fonts

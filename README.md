@@ -26,6 +26,8 @@ My macOS setup with fish, VS Code, Java, Node
 * [Sourcetree](https://www.sourcetreeapp.com)
 * [App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner)
 * [DaisyDisk](https://daisydiskapp.com)
+* [Pocket](https://app.getpocket.com)
+* [Raindrop.io](hhttps://app.raindrop.io)
 
 # Alfred Workflows
 * [Philips Hue Alfred Workflow](https://github.com/benknight/hue-alfred-workflow)

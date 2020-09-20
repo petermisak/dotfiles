@@ -31,6 +31,9 @@ set -xg PATH $HOME/.cargo/bin $PATH
 # User scripts
 set -xg PATH $HOME/bin $PATH
 
+# bat
+set -xg BAT_THEME OneHalfLight
+
 # Fish syntax highlighting
 #set -g fish_color_autosuggestion '555'  'brblack'
 #set -g fish_color_cancel -r

@@ -33,5 +33,6 @@
     "terminal.integrated.fontSize": 13,
     "debug.console.fontSize": 13,
     "editor.columnSelection": false,
-    "workbench.colorTheme": "GitHub Sharp"
+    "workbench.colorTheme": "GitHub Sharp",
+    "python.languageServer": "Microsoft"
 }

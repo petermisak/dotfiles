@@ -34,5 +34,23 @@
     "debug.console.fontSize": 13,
     "editor.columnSelection": false,
     "workbench.colorTheme": "GitHub Sharp",
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "vs-kubernetes": {
+        "vs-kubernetes.namespace": "",
+        "vs-kubernetes.kubectl-path": "",
+        "vs-kubernetes.helm-path": "",
+        "vs-kubernetes.draft-path": "",
+        "vs-kubernetes.minikube-path": "",
+        "vs-kubernetes.kubectlVersioning": "user-provided",
+        "vs-kubernetes.outputFormat": "yaml",
+        "vs-kubernetes.kubeconfig": "/Users/peter/.kube/pcp.config",
+        "vs-kubernetes.knownKubeconfigs": [],
+        "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+        "vs-kubernetes.nodejs-autodetect-remote-root": true,
+        "vs-kubernetes.nodejs-remote-root": "",
+        "vs-kubernetes.nodejs-debug-port": 9229,
+        "checkForMinikubeUpgrade": true,
+        "logsDisplay": "webview",
+        "imageBuildTool": "Docker"
+    }
 }

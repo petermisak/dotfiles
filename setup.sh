@@ -116,6 +116,7 @@ code --install-extension eamodio.gitlens
 code --install-extension humao.rest-client
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 

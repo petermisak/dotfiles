@@ -34,6 +34,5 @@
     "debug.console.fontSize": 13,
     "editor.columnSelection": false,
     "workbench.colorTheme": "GitHub Sharp",
-    "python.languageServer": "Microsoft",
     "python.languageServer": "Pylance"
 }

@@ -117,6 +117,7 @@ code --install-extension humao.rest-client
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension mhookyqr.beautify
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 

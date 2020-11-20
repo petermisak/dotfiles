@@ -33,7 +33,7 @@
     "terminal.integrated.fontSize": 13,
     "debug.console.fontSize": 13,
     "editor.columnSelection": false,
-    "workbench.colorTheme": "GitHub Sharp",
+    "workbench.colorTheme": "GitHub Plus",
     "python.languageServer": "Pylance",
     "vs-kubernetes": {
         "vs-kubernetes.namespace": "",
@@ -52,5 +52,6 @@
         "checkForMinikubeUpgrade": true,
         "logsDisplay": "webview",
         "imageBuildTool": "Docker"
-    }
+    },
+    "files.autoSave": "afterDelay"
 }

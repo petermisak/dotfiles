@@ -119,6 +119,7 @@ code --install-extension ms-python.vscode-pylance
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension mhookyqr.beautify
 code --install-extension k--kato.intellij-idea-keybindings
+code --install-extension 42crunch.vscode-openapi
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 
@@ -162,6 +163,7 @@ sudo port install helm-2.14
 brew install speedtest-cli
 brew install neofetch
 brew install ctop lazydocker
+brew install stern
 
 cd /usr/local/bin
 ln -s helm helm3

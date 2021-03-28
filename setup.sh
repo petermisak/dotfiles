@@ -142,6 +142,7 @@ brew install starship
 brew install azure-cli
 brew install git-delta
 brew install watch
+brew install exa
 
 # Fira Code font
 brew tap homebrew/cask-fonts
@@ -150,6 +151,7 @@ brew cask install font-fira-code
 # JetBrains Mono font
 brew tap homebrew/cask-fonts
 brew cask install font-jetbrains-mono
+brew install font-jetbrains-mono-nerd-font
 
 # Kubelogin
 brew install int128/kubelogin/kubelogin

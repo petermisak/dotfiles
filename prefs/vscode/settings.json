@@ -53,5 +53,11 @@
         "logsDisplay": "webview",
         "imageBuildTool": "Docker"
     },
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }

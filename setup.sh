@@ -170,3 +170,11 @@ brew install stern
 cd /usr/local/bin
 ln -s helm helm3
 
+# AWS
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+rm AWSCLIV2.pkg
+
+brew tap weaveworks/tap
+brew install weaveworks/tap/eksctl
+

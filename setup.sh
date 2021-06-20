@@ -135,6 +135,9 @@ sudo chown -R $USER /opt/local/lib/node_modules
 npm install -g n
 mkdir ~/n
 
+npm install -g wikit
+npm install -g vtop
+
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

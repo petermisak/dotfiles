@@ -120,6 +120,7 @@ code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension mhookyqr.beautify
 code --install-extension k--kato.intellij-idea-keybindings
 code --install-extension 42crunch.vscode-openapi
+code --install-extension ms-vscode-remote.remote-containers
 
 ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 

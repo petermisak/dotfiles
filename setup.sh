@@ -107,23 +107,6 @@ fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add evanlucas/fish-kubectl-completions"
 fish -c "fisher add DrPhil/kubectl-fish-abbr"
 
-code --install-extension ccy.ayu-adaptive
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension VisualStudioExptTeam.vscodeintellicode
-code --install-extension vscode-icons-team.vscode-icons
-code --install-extension skyapps.fish-vscode
-code --install-extension eamodio.gitlens
-code --install-extension humao.rest-client
-code --install-extension ms-python.python
-code --install-extension ms-python.vscode-pylance
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-code --install-extension mhookyqr.beautify
-code --install-extension k--kato.intellij-idea-keybindings
-code --install-extension 42crunch.vscode-openapi
-code --install-extension ms-vscode-remote.remote-containers
-
-ln -sf $(pwd)/prefs/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
-
 sdk install java $JAVA_VERSION
 sdk install maven
 

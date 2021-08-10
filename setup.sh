@@ -154,6 +154,8 @@ brew install neofetch
 brew install ctop lazydocker
 brew install stern
 
+brew install fluor
+
 cd /usr/local/bin
 ln -s helm helm3
 

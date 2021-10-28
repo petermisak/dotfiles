@@ -110,7 +110,7 @@ fish -c "fisher add DrPhil/kubectl-fish-abbr"
 sdk install java $JAVA_VERSION
 sdk install maven
 
-sudo port install nodejs12 npm6
+sudo port install nodejs14 npm8
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'

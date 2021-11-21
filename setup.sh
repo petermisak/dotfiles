@@ -153,6 +153,7 @@ brew install speedtest-cli
 brew install neofetch
 brew install ctop lazydocker
 brew install stern
+brew install ycd/tap/dstp
 
 brew install fluor
 

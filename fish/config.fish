@@ -5,6 +5,9 @@ function fish_greeting; end
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF8
 
+# Default editor Vim
+set -xg EDITOR vim
+
 # Macports
 set -xg PATH /opt/local/bin /opt/local/sbin $PATH
 

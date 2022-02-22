@@ -20,6 +20,9 @@ matches:
         params:
           format: "%Y-%m-%d"
 
+  - trigger: ":du"
+    replace: "du -hs ."
+
   # Shell commands
   - trigger: ":shell"
     replace: "{{output}}"

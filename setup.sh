@@ -130,6 +130,7 @@ brew install azure-cli
 brew install git-delta
 brew install watch
 brew install exa
+brew install dog
 
 # Fira Code font
 brew tap homebrew/cask-fonts

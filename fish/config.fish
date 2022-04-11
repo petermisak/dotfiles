@@ -37,6 +37,19 @@ set -xg PATH $HOME/bin $PATH
 # bat
 set -xg BAT_THEME OneHalfLight
 
+# Fish completions for Homebrew, as we're using Macports' fish
+if test -d (brew --prefix)"/share/fish/completions"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+end
+
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+end
+
+# asdf
+
+source /usr/local/opt/asdf/libexec/asdf.fish
+
 # Fish syntax highlighting
 #set -g fish_color_autosuggestion '555'  'brblack'
 #set -g fish_color_cancel -r

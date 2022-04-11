@@ -110,14 +110,16 @@ fish -c "fisher add DrPhil/kubectl-fish-abbr"
 sdk install java $JAVA_VERSION
 sdk install maven
 
-sudo port install nodejs14 npm8
+sudo port install nodejs17 npm8
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
-npm install -g n
-mkdir ~/n
+brew install asdf
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs latest
+asdf global nodejs latest
 
 npm install -g wikit
 npm install -g vtop

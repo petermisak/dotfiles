@@ -130,6 +130,7 @@ npm install -g vtop
 brew install starship
 brew install azure-cli
 brew install git-delta
+brew install gitui
 brew install watch
 brew install exa
 brew install dog

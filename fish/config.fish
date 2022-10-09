@@ -46,6 +46,9 @@ if test -d (brew --prefix)"/share/fish/vendor_completions.d"
     set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
 
+# Enable AWS CLI autocompletion: github.com/aws/aws-cli/issues/1079
+complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
+
 # asdf
 
 source /usr/local/opt/asdf/libexec/asdf.fish
@@ -113,20 +116,5 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 # set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
 set -xg FZF_DEFAULT_OPTS --height 40% --color light
 # set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
-function pcp_on -d "Set PCP kubeconfig"
-    set PCP_KUBECONFIG "$HOME/.kube/pcp.config"
-
-    if not test -z "$PCP_KUBECONFIG"; and not string match -q "*$PCP_KUBECONFIG*" $KUBECONFIG
-        set -xg KUBECONFIG $KUBECONFIG:$PCP_KUBECONFIG
-    end
-end
-
-function pcp_off -d "Unset PCP kubeconfig"
-    set PCP_KUBECONFIG "$HOME/.kube/pcp.config"
-
-    if not test -z "$PCP_KUBECONFIG"; and string match -q "*$PCP_KUBECONFIG*" $KUBECONFIG
-        set -xg KUBECONFIG (string replace -r "\:$PCP_KUBECONFIG" "" -- $KUBECONFIG)
-    end
-end
 
 starship init fish | source

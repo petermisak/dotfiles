@@ -161,13 +161,14 @@ brew install ycd/tap/dstp
 
 brew install fluor
 
+brew tap turbot/tap
+brew install steampipe
+
 cd /usr/local/bin
 ln -s helm helm3
 
 # AWS
-curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
-sudo installer -pkg AWSCLIV2.pkg -target /
-rm AWSCLIV2.pkg
+brew install aws-cli
 
 brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl

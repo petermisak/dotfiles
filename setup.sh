@@ -168,7 +168,7 @@ cd /usr/local/bin
 ln -s helm helm3
 
 # AWS
-brew install aws-cli
+brew install awscli
 
 brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl

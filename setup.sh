@@ -47,13 +47,14 @@ fi
 
 sudo xcodebuild -license accept
 
-sudo port selfupdate
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-sudo port install git +credential_osxkeychain+doc+diff_highlight
-sudo port install bash
-sudo port install fzf
+brew install bash
+brew install git
+brew install fzf
 
-sudo port install vim +huge +python37
+brew install vim
 git clone https://github.com/petermisak/.vim.git ~/.vim-mine
 ln -sf ~/.vim-mine ~/.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
@@ -80,9 +81,10 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 echo "Installing fish shell"
 
-sudo port install fish
-sudo chpass -s /opt/local/bin/fish ${USER}
-sudo sh -c 'echo /opt/local/bin/fish >> /etc/shells'
+brew install fish
+sudo chpass -s /usr/local/bin/fish ${USER}
+sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
+chsh -s /usr/local/bin/fish
 
 # ln -sf $(pwd)/fish/functions "$HOME/.config/fish"
 ln -sf $(pwd)/fish/config.fish "$HOME/.config/fish/config.fish"
@@ -110,7 +112,7 @@ fish -c "fisher add DrPhil/kubectl-fish-abbr"
 sdk install java $JAVA_VERSION
 sdk install maven
 
-sudo port install nodejs17 npm8
+brew install node npm
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
@@ -124,9 +126,6 @@ asdf global nodejs latest
 npm install -g wikit
 npm install -g vtop
 
-# Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 brew install starship
 brew install azure-cli
 brew install git-delta
@@ -134,6 +133,10 @@ brew install gitui
 brew install watch
 brew install exa
 brew install dog
+brew install ripgrep
+brew install htop
+brew install jq
+brew install httpie
 
 # Fira Code font
 brew tap homebrew/cask-fonts
@@ -149,8 +152,6 @@ brew install int128/kubelogin/kubelogin
 
 # Helm
 brew install helm
-# I need Helm-2.14 in particular, so I need to use MacPorts
-sudo port install helm-2.14
 
 # Some additional goodies
 brew install speedtest-cli
@@ -163,9 +164,6 @@ brew install fluor
 
 brew tap turbot/tap
 brew install steampipe
-
-cd /usr/local/bin
-ln -s helm helm3
 
 # AWS
 brew install awscli

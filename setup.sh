@@ -160,8 +160,6 @@ brew install ctop lazydocker
 brew install stern
 brew install ycd/tap/dstp
 
-brew install fluor
-
 brew tap turbot/tap
 brew install steampipe
 

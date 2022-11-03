@@ -33,3 +33,12 @@ matches:
         type: shell
         params:
           cmd: "echo Hello from your shell"
+  # Breadcrumb
+  - trigger: ":bc"
+    word: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo `date -v -1d \"+[[%Y-%m-%d|<< Yesterday]]\"`' | '`date -v +1d \"+[[%Y-%m-%d|Tomorrow >>]]\"`"

@@ -54,11 +54,15 @@ brew install bash
 brew install git
 brew install fzf
 
-brew install vim
+brew install vim neovim
 git clone https://github.com/petermisak/.vim.git ~/.vim-mine
 ln -sf ~/.vim-mine ~/.vim
-ln -sf $HOME/.vim/vimrc $HOME/.vimrc
-cd $HOME/.vim
+ln -sf ~/.vim/vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+ln -snf ~/.vim/vimrc ~/.config/nvim/init.vim
+mkdir -p ~/.local/share/nvim
+ln -snf ~/.vim ~/.local/share/nvim/site
+cd ~/.vim
 git submodule update --init
 cd -
 
@@ -67,7 +71,7 @@ git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceani
 ln -sf $(pwd)/git/.gitaliases $HOME/.gitaliases
 
 git config --global include.path $HOME/.gitaliases
-git config --global core.editor vim
+git config --global core.editor nvim
 git config --global color.ui auto
 git config --global credential.helper osxkeychain
 git config --global core.pager "delta"

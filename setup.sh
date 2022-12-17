@@ -153,6 +153,9 @@ brew install int128/kubelogin/kubelogin
 # Helm
 brew install helm
 
+# Minikube
+brew install minikube
+
 # Some additional goodies
 brew install speedtest-cli
 brew install neofetch

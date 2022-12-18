@@ -1,3 +1,5 @@
+. ~/.config/fish/aliases.fish
+
 # disable fish greeting message
 function fish_greeting; end
 

@@ -92,6 +92,7 @@ chsh -s /usr/local/bin/fish
 
 # ln -sf $(pwd)/fish/functions "$HOME/.config/fish"
 ln -sf $(pwd)/fish/config.fish "$HOME/.config/fish/config.fish"
+ln -sf $(pwd)/fish/aliases.fish "$HOME/.config/fish/aliases.fish"
 
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config

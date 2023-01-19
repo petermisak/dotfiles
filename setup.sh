@@ -58,10 +58,6 @@ brew install vim neovim
 git clone https://github.com/petermisak/.vim.git ~/.vim-mine
 ln -sf ~/.vim-mine ~/.vim
 ln -sf ~/.vim/vimrc ~/.vimrc
-mkdir -p ~/.config/nvim
-ln -snf ~/.vim/vimrc ~/.config/nvim/init.vim
-mkdir -p ~/.local/share/nvim
-ln -snf ~/.vim ~/.local/share/nvim/site
 cd ~/.vim
 git submodule update --init
 cd -
@@ -113,6 +109,12 @@ ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 fish -c "fisher add barnybug/docker-fish-completion"
 fish -c "fisher add evanlucas/fish-kubectl-completions"
 fish -c "fisher add DrPhil/kubectl-fish-abbr"
+
+# Tmux
+brew install tmux
+ln -sf $(pwd)/tmux/.tmux.conf "$HOME/.tmux.conf"
+mkdir ~/.tmux
+ln -sf $(pwd)/tmux/github_light.tmux "$HOME/.tmux/github_light.tmux"
 
 sdk install java $JAVA_VERSION
 sdk install maven

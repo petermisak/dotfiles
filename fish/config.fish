@@ -78,8 +78,10 @@ source /usr/local/opt/asdf/libexec/asdf.fish
 #set -g fish_color_user brgreen
 #set -g fish_color_valid_path --underline
 
-set -g fish_color_search_match 'black'  '--background=d8dbda'
-set -g fish_pager_color_prefix 'black' '--bold' '--underline'
+#set -g fish_color_search_match 'black'  '--background=d8dbda'
+#set -g fish_pager_color_prefix 'black' '--bold' '--underline'
+
+set -g fish_pager_color_selected_background --background=ffa500
 
 function _gen_fzf_default_opts
     set color00 '#1B2B34'

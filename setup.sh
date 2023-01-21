@@ -139,6 +139,7 @@ brew install git-delta
 brew install gitui
 brew install watch
 brew install exa
+brew install fd
 brew install dog
 brew install ripgrep
 brew install htop

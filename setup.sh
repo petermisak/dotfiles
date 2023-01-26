@@ -115,6 +115,7 @@ brew install tmux
 ln -sf $(pwd)/tmux/.tmux.conf "$HOME/.tmux.conf"
 mkdir ~/.tmux
 ln -sf $(pwd)/tmux/github_light.tmux "$HOME/.tmux/github_light.tmux"
+tic -x $(pwd)/tmux-256color
 
 sdk install java $JAVA_VERSION
 sdk install maven

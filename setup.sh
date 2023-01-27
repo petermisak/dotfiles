@@ -102,6 +102,7 @@ fish -c "fisher add jethrokuan/z"
 fish -c "fisher add reitzig/sdkman-for-fish"
 fish -c "fisher add edc/bass"
 fish -c "fisher add jhillyerd/plugin-git"
+fish -c "fisher add h-matsuo/fish-color-scheme-switcher"
 
 ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 

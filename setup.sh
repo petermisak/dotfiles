@@ -96,20 +96,20 @@ if not functions -q fisher
     fish -c fisher
 end
 
-fish -c "fisher add barnybug/docker-fish-completion"
-fish -c "fisher add jethrokuan/fzf"
-fish -c "fisher add jethrokuan/z"
-fish -c "fisher add reitzig/sdkman-for-fish"
-fish -c "fisher add edc/bass"
-fish -c "fisher add jhillyerd/plugin-git"
-fish -c "fisher add h-matsuo/fish-color-scheme-switcher"
+fish -c "fisher install barnybug/docker-fish-completion"
+fish -c "fisher install jethrokuan/fzf"
+fish -c "fisher install jethrokuan/z"
+fish -c "fisher install reitzig/sdkman-for-fish"
+fish -c "fisher install edc/bass"
+fish -c "fisher install jhillyerd/plugin-git"
+fish -c "fisher install h-matsuo/fish-color-scheme-switcher"
 
 ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 
 # Some Docker and K8s goodies
-fish -c "fisher add barnybug/docker-fish-completion"
-fish -c "fisher add evanlucas/fish-kubectl-completions"
-fish -c "fisher add DrPhil/kubectl-fish-abbr"
+fish -c "fisher install barnybug/docker-fish-completion"
+fish -c "fisher install evanlucas/fish-kubectl-completions"
+fish -c "fisher install DrPhil/kubectl-fish-abbr"
 
 # Tmux
 brew install tmux

@@ -118,6 +118,11 @@ mkdir ~/.tmux
 ln -sf $(pwd)/tmux/github_light.tmux "$HOME/.tmux/github_light.tmux"
 tic -x $(pwd)/tmux-256color
 
+# Zed
+mkdir ~/.config/zed
+ln -sf $(pwd)/zed/settings.json "$HOME/.config/zed/settings.json"
+ln -sf $(pwd)/zed/keymap.json "$HOME/.config/zed/keymap.json"
+
 sdk install java $JAVA_VERSION
 sdk install maven
 

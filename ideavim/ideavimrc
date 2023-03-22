@@ -1,0 +1,24 @@
+let mapleader=" "
+
+""" Plugins ----------------------------------------
+set surround
+set multiple-cursors
+set commentary
+
+""" Common settings --------------------------------
+set showmode
+set nu
+set so=5
+set incsearch
+set nu
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+""" Idea-specific settings -------------------------
+set ideajon
+set ideastatusicon=gray
+
+nnoremap <leader>ef :e ~/.ideavimrc<CR>
+nnoremap <leader>ev :action IdeaVim.ReloadVimRc.reload<CR>
+
+nnoremap <leader>= :action ReformatCode<CR>

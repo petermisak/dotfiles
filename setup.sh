@@ -62,6 +62,8 @@ cd ~/.vim
 git submodule update --init
 cd -
 
+ln -sf $(pwd)/ideavim/ideavimrc "$HOME/.ideavimrc"
+
 git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
 
 ln -sf $(pwd)/git/.gitaliases $HOME/.gitaliases

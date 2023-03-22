@@ -9,6 +9,7 @@ set commentary
 set showmode
 set nu
 set so=5
+set relativenumber
 set incsearch
 set nu
 set clipboard+=unnamed

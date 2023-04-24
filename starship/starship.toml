@@ -3,4 +3,5 @@ command_timeout = 1500
 [kubernetes]
 disabled = false
 [kubernetes.context_aliases]
-"p.misak@ng-hive-dev-cluster.eu-central-1.eksctl.io" = "ng-hive-dev[aws]"
+"arn:aws:eks.*ng-hive-dev01-cluster.*" = "ng-hive-dev[aws]"
+

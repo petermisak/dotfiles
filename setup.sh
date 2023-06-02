@@ -183,6 +183,8 @@ brew install ycd/tap/dstp
 brew tap turbot/tap
 brew install steampipe
 
+brew install aichat
+
 # AWS
 brew install awscli
 

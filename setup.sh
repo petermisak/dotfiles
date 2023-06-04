@@ -98,7 +98,6 @@ if not functions -q fisher
     fish -c fisher
 end
 
-fish -c "fisher install barnybug/docker-fish-completion"
 fish -c "fisher install jethrokuan/fzf"
 fish -c "fisher install jethrokuan/z"
 fish -c "fisher install reitzig/sdkman-for-fish"
@@ -113,6 +112,10 @@ fish -c "fisher install barnybug/docker-fish-completion"
 fish -c "fisher install evanlucas/fish-kubectl-completions"
 fish -c "fisher install DrPhil/kubectl-fish-abbr"
 
+# After you install Docker on your machine
+ln -shi /Applications/Docker.app/Contents/Resources/etc/docker.fish-completion ~/.config/fish/completions/docker.fish
+ln -shi /Applications/Docker.app/Contents/Resources/etc/docker-compose.fish-completion ~/.config/fish/completions/docker-compose.fish
+
 # Tmux
 brew install tmux
 ln -sf $(pwd)/tmux/.tmux.conf "$HOME/.tmux.conf"
@@ -125,9 +128,6 @@ mkdir ~/.config/zed
 ln -sf $(pwd)/zed/settings.json "$HOME/.config/zed/settings.json"
 ln -sf $(pwd)/zed/keymap.json "$HOME/.config/zed/keymap.json"
 
-sdk install java $JAVA_VERSION
-sdk install maven
-
 brew install node npm
 
 mkdir ~/.npm-global
@@ -138,6 +138,14 @@ brew install asdf
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs latest
 asdf global nodejs latest
+asdf plugin add java https://github.com/halcyon/asdf-java.git
+asdf install java temurin-17.0.7+7
+asdf install temurin-8.0.372+7
+asdf global java temurin-17.0.7+7
+asdf plugin add maven https://github.com/halcyon/asdf-maven.git
+asdf install maven 3.9.2
+asdf install maven 3.6.3
+asdf global maven 3.9.2
 
 npm install -g wikit
 npm install -g vtop

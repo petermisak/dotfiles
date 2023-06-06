@@ -162,6 +162,7 @@ brew install ripgrep
 brew install htop
 brew install jq
 brew install httpie
+brew install 1password-cli
 
 # Fira Code font
 brew tap homebrew/cask-fonts

@@ -140,7 +140,7 @@ asdf install nodejs latest
 asdf global nodejs latest
 asdf plugin add java https://github.com/halcyon/asdf-java.git
 asdf install java temurin-17.0.7+7
-asdf install temurin-8.0.372+7
+asdf install java temurin-8.0.372+7
 asdf global java temurin-17.0.7+7
 asdf plugin add maven https://github.com/halcyon/asdf-maven.git
 asdf install maven 3.9.2

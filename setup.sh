@@ -182,6 +182,9 @@ brew install helm
 # Minikube
 brew install minikube
 
+# Confluent Cloud CLI
+brew install confluentinc/tap/cli
+
 # Some additional goodies
 brew install speedtest-cli
 brew install neofetch

@@ -204,7 +204,7 @@ brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
 
 # See https://espanso.org/docs/install/mac
-brew tap federico-terzi/espanso
+brew tap espanso/espanso
 brew install espanso
 rm -rf ~/Library/Preferences/espanso
 ln -sf $(pwd)/espanso "$HOME/Library/Preferences"

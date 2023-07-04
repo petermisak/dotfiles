@@ -107,6 +107,9 @@ fish -c "fisher install h-matsuo/fish-color-scheme-switcher"
 
 ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 
+# WezTerm
+brew install --cask wezterm
+
 # Some Docker and K8s goodies
 fish -c "fisher install barnybug/docker-fish-completion"
 fish -c "fisher install evanlucas/fish-kubectl-completions"

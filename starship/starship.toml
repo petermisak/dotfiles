@@ -1,6 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 command_timeout = 1500
 
 [kubernetes]
+symbol = '⎈ '
 disabled = false
 [kubernetes.context_aliases]
 "arn:aws:eks.*ng-hive-dev01-cluster.*" = "ng-hive-dev[aws]"

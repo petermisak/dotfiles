@@ -109,6 +109,7 @@ ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 
 # WezTerm
 brew install --cask wezterm
+ln -sf $(pwd)/.wezterm.lua "$HOME/.wezterm.lua"
 
 # Some Docker and K8s goodies
 fish -c "fisher install barnybug/docker-fish-completion"

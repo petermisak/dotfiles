@@ -18,7 +18,7 @@ config.initial_cols = 135
 config.initial_rows = 40
 
 config.hide_tab_bar_if_only_one_tab = true
-config.use_fancy_tab_bar = false
+-- config.use_fancy_tab_bar = false
 
 -- Config for light mode
 config.window_frame = {
@@ -36,7 +36,7 @@ config.window_frame = {
 
 config.colors = {
   tab_bar = {
-    background = '#efefef',
+    background = '#eee',
 
     active_tab = {
       bg_color = '#ddd',
@@ -44,8 +44,8 @@ config.colors = {
     },
 
     inactive_tab = {
-      bg_color = '#efefef',
-      fg_color = '#ccc'
+      bg_color = '#eee',
+      fg_color = '#bbb'
     },
     inactive_tab_hover = {
       bg_color = '#bbb',

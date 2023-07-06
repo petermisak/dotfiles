@@ -4,7 +4,7 @@ My macOS setup with fish, VS Code, Java, Node
 # Prerequisites
 * [Xcode](https://apps.apple.com/sk/app/xcode/id497799835?mt=12)
 * [Visual Studio Code](https://code.visualstudio.com/download)
-* [iTerm2](https://www.iterm2.com)
+* [iTerm2](https://www.iterm2.com) - Probably going to be deprecated in favor of WezTerm
 * [Menlo for Powerline](https://github.com/abertsch/Menlo-for-Powerline)
 * [SF Mono for Powerline](https://github.com/Twixes/SF-Mono-Powerline)
 

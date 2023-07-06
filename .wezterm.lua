@@ -9,8 +9,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.color_scheme = 'AtomOneLight'
--- config.color_scheme = 'Piatto Light'
+-- config.color_scheme = 'AtomOneLight'
+config.color_scheme = 'Piatto Light'
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
 config.font_size = 13
 config.line_height = 1.2

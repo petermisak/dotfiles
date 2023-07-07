@@ -88,6 +88,8 @@ source /usr/local/opt/asdf/libexec/asdf.fish
 
 scheme set default
 
+set -g fish_pager_color_prefix 'black' '--bold' '--underline'
+
 function _gen_fzf_default_opts
     set color00 '#1B2B34'
     set color01 '#343D46'

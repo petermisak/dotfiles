@@ -11,6 +11,8 @@ end
 
 -- config.color_scheme = 'AtomOneLight'
 config.color_scheme = 'Piatto Light'
+-- config.color_scheme = 'One Light (Gogh)'
+-- config.color_scheme = 'Tomorrow'
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
 config.font_size = 13
 config.line_height = 1.2

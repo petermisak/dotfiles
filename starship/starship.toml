@@ -2,6 +2,12 @@
 
 command_timeout = 1500
 
+[gradle]
+symbol = ' '
+
+[kotlin]
+symbol = ' '
+
 [kubernetes]
 symbol = '⎈ '
 disabled = false

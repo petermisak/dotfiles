@@ -151,6 +151,9 @@ asdf install maven 3.9.2
 asdf install maven 3.6.3
 asdf global maven 3.9.2
 
+brew tap snyk/tap
+brew install snyk
+
 npm install -g wikit
 npm install -g vtop
 

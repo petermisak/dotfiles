@@ -44,8 +44,9 @@ end
 -- config.color_scheme = 'AtomOneLight'
 -- config.color_scheme = 'Piatto Light'
 config.color_scheme = 'One Light (base16)'
--- config.color_scheme = 'Tomorrow'
-config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium' })
+-- config.color_scheme = 'Tomorrow Night'
+-- config.color_scheme = 'Tokyo Night Moon'
+config.font = wezterm.font('JetBrainsMono NF', { weight = 'Medium' })
 config.font_size = 13
 config.line_height = 1.2
 config.initial_cols = 135

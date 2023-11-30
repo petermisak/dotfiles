@@ -32,6 +32,18 @@ local function themeCycler(window, _)
   end
 end
 
+-- Autodetect OS theme changes
+local appearance = wezterm.gui.get_appearance()
+local scheme = "light"
+if appearance:find('Dark') then
+  scheme = "Tomorrow Night"
+  -- scheme = "Solarized Dark Higher Contrast"
+else
+  scheme = "One Light (base16)"
+  -- scheme = "Piatto Light"
+  -- scheme = "Catppuccin Frappe"
+end
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -43,10 +55,11 @@ end
 
 -- config.color_scheme = 'AtomOneLight'
 -- config.color_scheme = 'Piatto Light'
-config.color_scheme = 'One Light (base16)'
+-- config.color_scheme = 'One Light (base16)'
 -- config.color_scheme = 'Tomorrow Night'
 -- config.color_scheme = 'Tokyo Night Moon'
-config.font = wezterm.font('JetBrainsMono NF', { weight = 'Medium' })
+config.color_scheme = scheme
+config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
 config.font_size = 13
 config.line_height = 1.2
 config.initial_cols = 135
@@ -66,7 +79,7 @@ config.window_frame = {
   button_fg = '#666',
   button_bg = '#eaeaea',
   button_hover_fg = '#333',
-  button_hover_bg = '#ddd'
+  button_hover_bg = '#ddd',
 }
 
 config.colors = {
@@ -98,12 +111,27 @@ config.colors = {
   }
 }
 
+local act = wezterm.action
+
 config.keys = {
+  { key = 'j', mods = 'CMD|SHIFT', action = act.ActivatePaneDirection 'Down' },
+  { key = 'k', mods = 'CMD|SHIFT', action = act.ActivatePaneDirection 'Up' },
+  { key = 'h', mods = 'CMD|SHIFT', action = act.ActivatePaneDirection 'Left', },
+  { key = 'l', mods = 'CMD|SHIFT', action = act.ActivatePaneDirection 'Right', },
+  { key = '+', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' }, },
+  { key = '_', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
+  { key = 'x', mods = 'CMD', action = act.CloseCurrentPane{ confirm = false } },
+
+  { key = 'h', mods = 'CMD|SHIFT|CTRL', action = act.AdjustPaneSize{ 'Left', 1 } },
+  { key = 'l', mods = 'CMD|SHIFT|CTRL', action = act.AdjustPaneSize{ 'Right', 1 } },
+  { key = 'k', mods = 'CMD|SHIFT|CTRL', action = act.AdjustPaneSize{ 'Up', 1 } },
+  { key = 'j', mods = 'CMD|SHIFT|CTRL', action = act.AdjustPaneSize{ 'Down', 1 } },
+
   -- Theme Cycler
   { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
 
   -- Look up Scheme you switched to
-  { key = "Escape", mods = "CTRL", action = wezterm.action.ShowDebugOverlay },
+  { key = "Escape", mods = "CTRL", action = act.ShowDebugOverlay },
 }
 
 return config

@@ -32,18 +32,6 @@ local function themeCycler(window, _)
   end
 end
 
--- Autodetect OS theme changes
-local appearance = wezterm.gui.get_appearance()
-local scheme = "light"
-if appearance:find('Dark') then
-  scheme = "Tomorrow Night"
-  -- scheme = "Solarized Dark Higher Contrast"
-else
-  scheme = "One Light (base16)"
-  -- scheme = "Piatto Light"
-  -- scheme = "Catppuccin Frappe"
-end
-
 -- This table will hold the configuration.
 local config = {}
 
@@ -53,13 +41,69 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+-- Autodetect OS theme changes
+local appearance = wezterm.gui.get_appearance()
+local scheme = "light"
+local light_scheme = "One Light (base16)"
+local dark_scheme = "Tomorrow Night"
+
+if appearance:find('Dark') then
+  scheme = dark_scheme
+else
+  scheme = light_scheme
+  -- scheme = "Piatto Light"
+  -- scheme = "Catppuccin Frappe"
+  -- Config for light mode
+  config.window_frame = {
+    inactive_titlebar_fg = '#ccc',
+    inactive_titlebar_bg = '#eaeaea',
+    active_titlebar_bg = '#eaeaea',
+    active_titlebar_fg = '#666',
+    active_titlebar_border_bottom = '#eaeaea',
+    inactive_titlebar_border_bottom = 'white',
+    button_fg = '#666',
+    button_bg = '#eaeaea',
+    button_hover_fg = '#333',
+    button_hover_bg = '#ddd',
+  }
+
+  config.colors = {
+    tab_bar = {
+      background = '#eee',
+
+      active_tab = {
+        bg_color = '#ddd',
+        fg_color = '#666'
+      },
+
+      inactive_tab = {
+        bg_color = '#eee',
+        fg_color = '#bbb'
+      },
+      inactive_tab_hover = {
+        bg_color = '#bbb',
+        fg_color = '#555'
+      },
+
+      new_tab = {
+        bg_color = '#efefef',
+        fg_color = '#333'
+      },
+      new_tab_hover = {
+        bg_color = '#bbb',
+        fg_color = '#555'
+      }
+    }
+  }
+end
+
 -- config.color_scheme = 'AtomOneLight'
 -- config.color_scheme = 'Piatto Light'
 -- config.color_scheme = 'One Light (base16)'
 -- config.color_scheme = 'Tomorrow Night'
 -- config.color_scheme = 'Tokyo Night Moon'
 config.color_scheme = scheme
-config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
+config.font = wezterm.font('JetBrains Mono', { weight = 'DemiBold' })
 config.font_size = 13
 config.line_height = 1.2
 config.initial_cols = 135
@@ -67,49 +111,6 @@ config.initial_rows = 40
 
 config.hide_tab_bar_if_only_one_tab = true
 -- config.use_fancy_tab_bar = false
-
--- Config for light mode
-config.window_frame = {
-  inactive_titlebar_fg = '#ccc',
-  inactive_titlebar_bg = '#eaeaea',
-  active_titlebar_bg = '#eaeaea',
-  active_titlebar_fg = '#666',
-  active_titlebar_border_bottom = '#eaeaea',
-  inactive_titlebar_border_bottom = 'white',
-  button_fg = '#666',
-  button_bg = '#eaeaea',
-  button_hover_fg = '#333',
-  button_hover_bg = '#ddd',
-}
-
-config.colors = {
-  tab_bar = {
-    background = '#eee',
-
-    active_tab = {
-      bg_color = '#ddd',
-      fg_color = '#666'
-    },
-
-    inactive_tab = {
-      bg_color = '#eee',
-      fg_color = '#bbb'
-    },
-    inactive_tab_hover = {
-      bg_color = '#bbb',
-      fg_color = '#555'
-    },
-
-    new_tab = {
-      bg_color = '#efefef',
-      fg_color = '#333'
-    },
-    new_tab_hover = {
-      bg_color = '#bbb',
-      fg_color = '#555'
-    }
-  }
-}
 
 local act = wezterm.action
 
@@ -132,6 +133,9 @@ config.keys = {
 
   -- Look up Scheme you switched to
   { key = "Escape", mods = "CTRL", action = act.ShowDebugOverlay },
+
+  -- Switch color schemes via keyboard shortcut
+  -- { key = "1", mods = "CMD|SHIFT", action = 
 }
 
 return config

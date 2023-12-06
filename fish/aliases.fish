@@ -9,7 +9,7 @@ alias vv 'command nvim'
 alias v vim
 alias vim nvim
 
-# Exa -> ls
-alias ls 'exa --icons -F -H --group-directories-first --git -1'
+# eza -> ls
+alias ls 'eza --icons -F -H --group-directories-first --git -1'
 alias ll 'ls -l'
 alias la 'll -aF'

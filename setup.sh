@@ -59,12 +59,12 @@ git clone https://github.com/petermisak/.vim.git ~/.vim-mine
 ln -sf ~/.vim-mine ~/.vim
 ln -sf ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
-git submodule update --init
+git submodule update --init --recursive
 cd -
 
 ln -sf $(pwd)/ideavim/ideavimrc "$HOME/.ideavimrc"
 
-git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
+# git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
 
 ln -sf $(pwd)/git/.gitaliases $HOME/.gitaliases
 
@@ -85,6 +85,7 @@ echo "Installing fish shell"
 
 brew install fish
 sudo chpass -s /usr/local/bin/fish ${USER}
+# sudo chpass -s /opt/homebrew/bin/fish ${USER}
 sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 

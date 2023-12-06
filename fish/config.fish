@@ -59,34 +59,7 @@ op completion fish | source
 source /usr/local/opt/asdf/libexec/asdf.fish
 
 # Fish syntax highlighting
-#set -g fish_color_autosuggestion '555'  'brblack'
-#set -g fish_color_cancel -r
-#set -g fish_color_command --bold
-#set -g fish_color_comment red
-#set -g fish_color_cwd green
-#set -g fish_color_cwd_root red
-#set -g fish_color_end brmagenta
-#set -g fish_color_error brred
-#set -g fish_color_escape 'bryellow'  '--bold'
-#set -g fish_color_history_current --bold
-#set -g fish_color_host normal
-#set -g fish_color_match --background=brblue
-#set -g fish_color_normal normal
-#set -g fish_color_operator bryellow
-#set -g fish_color_param cyan
-#set -g fish_color_quote yellow
-#set -g fish_color_redirection brblue
-#set -g fish_color_search_match 'bryellow'  '--background=brblack'
-#set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
-#set -g fish_color_user brgreen
-#set -g fish_color_valid_path --underline
-
-#set -g fish_color_search_match 'black'  '--background=d8dbda'
-#set -g fish_pager_color_prefix 'black' '--bold' '--underline'
-
-# set -g fish_pager_color_selected_background --background=ffa500
-
-scheme set default
+# scheme set default
 
 set -g fish_pager_color_prefix 'black' '--bold' '--underline'
 
@@ -128,7 +101,9 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 set -xg FZF_DEFAULT_OPTS --height 40% --color light
 # set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
 
-# exa colors
+# exa/eza colors
 set -x EXA_COLORS "uu=0:gu=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0"
 
 starship init fish | source
+
+export PATH="$PATH:$HOME/.local/bin"

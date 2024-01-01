@@ -141,19 +141,22 @@ config.window_decorations = "RESIZE | MACOS_FORCE_ENABLE_SHADOW"
 
 local act = wezterm.action
 
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "j", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Up") },
 	{ key = "h", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Left") },
 	{ key = "l", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Right") },
-	{ key = "+", mods = "CTRL|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "_", mods = "CTRL|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "x", mods = "CMD", action = act.CloseCurrentPane({ confirm = false }) },
 
 	{ key = "h", mods = "CMD|SHIFT|CTRL", action = act.AdjustPaneSize({ "Left", 1 }) },
 	{ key = "l", mods = "CMD|SHIFT|CTRL", action = act.AdjustPaneSize({ "Right", 1 }) },
 	{ key = "k", mods = "CMD|SHIFT|CTRL", action = act.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "j", mods = "CMD|SHIFT|CTRL", action = act.AdjustPaneSize({ "Down", 1 }) },
+
+	-- Splitting
+	{ mods = "LEADER", key = "-", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ mods = "LEADER", key = "+", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 
 	-- Theme Cycler
 	{ key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },

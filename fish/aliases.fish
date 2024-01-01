@@ -7,9 +7,12 @@ alias ew 'nvim ~/.wezterm.lua'
 
 alias vv 'command nvim'
 alias v vim
-alias vim nvim
+# alias vim nvim
+# alias vim lazyvim
 
 # eza -> ls
 alias ls 'eza --icons -F -H --group-directories-first --git -1'
 alias ll 'ls -l'
 alias la 'll -aF'
+
+alias vim 'NVIM_APPNAME=lazyvim nvim'

@@ -54,6 +54,7 @@ local dark_scheme = "Catppuccin Macchiato"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
+-- local dark_scheme = "Rosé Pine (Gogh)"
 
 if appearance:find("Dark") then
 	scheme = dark_scheme
@@ -126,8 +127,8 @@ config.set_environment_variables = {
 }
 
 config.color_scheme = scheme
--- config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
-config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
+config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
+-- config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
 config.font_size = 13
 config.line_height = 1.2
 config.initial_cols = 135

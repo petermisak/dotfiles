@@ -1,7 +1,8 @@
 . ~/.config/fish/aliases.fish
 
 # disable fish greeting message
-function fish_greeting; end
+function fish_greeting
+end
 
 # Fix the locales
 set -x LC_ALL en_US.UTF-8
@@ -35,6 +36,7 @@ set -xg PATH $HOME/.cargo/bin $PATH
 
 # User scripts
 set -xg PATH $HOME/bin $PATH
+set -xg PATH $HOME/.local/bin $PATH
 
 # bat
 set -xg BAT_THEME OneHalfLight
@@ -61,7 +63,7 @@ source /usr/local/opt/asdf/libexec/asdf.fish
 # Fish syntax highlighting
 # scheme set default
 
-set -g fish_pager_color_prefix 'black' '--bold' '--underline'
+set -g fish_pager_color_prefix black --bold --underline
 
 function _gen_fzf_default_opts
     set color00 '#1B2B34'
@@ -81,7 +83,7 @@ function _gen_fzf_default_opts
     set color0E '#C594C5'
     set color0F '#AB7967'
 
-      echo "--black
+    echo "--black
   --height 40%
   --color=bg+:$color00,bg:$color00,spinner:$color0C,hl:$color0D
   --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
@@ -105,5 +107,3 @@ set -xg FZF_DEFAULT_OPTS --height 40% --color light
 set -x EXA_COLORS "uu=0:gu=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0"
 
 starship init fish | source
-
-export PATH="$PATH:$HOME/.local/bin"

@@ -12,8 +12,12 @@ set -x LANG en_US.UTF8
 set -xg EDITOR vim
 
 # Macports
-set -xg PATH /opt/local/bin /opt/local/sbin $PATH
-set -xg PATH /opt/homebrew/bin $PATH
+set HOMEBREW_HOME /opt/local
+if test -d /opt/homebrew
+    set HOMEBREW_HOME /opt/homebrew
+end
+
+set -xg PATH $HOMEBREW_HOME/bin $HOMEBREW_HOME/sbin $PATH
 
 # Homebrew Python
 set -xg PATH /usr/local/opt/python/libexec/bin $PATH
@@ -29,7 +33,9 @@ set -x KUBECONFIG $HOME/.kube/config
 set -xg PATH ~/.npm-global/bin $PATH
 
 # pyenv
-set -xg PATH ~/.pyenv/shims $PATH
+if test -d ~/.pyenv/shims
+    set -xg PATH ~/.pyenv/shims $PATH
+end
 
 # n
 set -xg N_PREFIX $HOME/n
@@ -62,7 +68,7 @@ op completion fish | source
 
 # asdf
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+source $HOMEBREW_HOME/opt/asdf/libexec/asdf.fish
 
 # Fish syntax highlighting
 # scheme set default

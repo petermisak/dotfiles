@@ -129,7 +129,7 @@ config.set_environment_variables = {
 config.color_scheme = scheme
 config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
 -- config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
-config.font_size = 13
+config.font_size = 14
 config.line_height = 1.2
 config.initial_cols = 135
 config.initial_rows = 40

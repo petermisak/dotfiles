@@ -13,6 +13,7 @@ set -xg EDITOR vim
 
 # Macports
 set -xg PATH /opt/local/bin /opt/local/sbin $PATH
+set -xg PATH /opt/homebrew/bin $PATH
 
 # Homebrew Python
 set -xg PATH /usr/local/opt/python/libexec/bin $PATH
@@ -27,6 +28,9 @@ set -x KUBECONFIG $HOME/.kube/config
 # Path to node global (the dir was created manually by mkdir ~/.npm-global ;  npm config set prefix '~/.npm-global')
 set -xg PATH ~/.npm-global/bin $PATH
 
+# pyenv
+set -xg PATH ~/.pyenv/shims $PATH
+
 # n
 set -xg N_PREFIX $HOME/n
 set -xg PATH $HOME/n/bin $PATH
@@ -34,7 +38,7 @@ set -xg PATH $HOME/n/bin $PATH
 # Cargo
 set -xg PATH $HOME/.cargo/bin $PATH
 
-# User scripts
+# User scripts & Lunar
 set -xg PATH $HOME/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
 
@@ -58,7 +62,7 @@ op completion fish | source
 
 # asdf
 
-source /usr/local/opt/asdf/libexec/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # Fish syntax highlighting
 # scheme set default

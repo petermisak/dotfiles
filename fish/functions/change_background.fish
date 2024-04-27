@@ -8,7 +8,7 @@ function change_background --argument mode_setting
             set mode light
         case dark
             yes | fish_config theme save "Catppuccin Macchiato"
-            git config --global delta.syntax-theme "Sublime Snazzy"
+            git config --global delta.syntax-theme zenburn
             set mode dark
     end
 end

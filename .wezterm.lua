@@ -44,64 +44,29 @@ end
 -- Autodetect OS theme changes
 local appearance = wezterm.gui.get_appearance()
 local scheme = "light"
-local light_scheme = "One Light (base16)"
+-- local light_scheme = "One Light (base16)"
+-- local light_scheme = "Github (base16)"
 -- local light_scheme = "zenbones"
 -- local light_scheme = "Rosé Pine Dawn (Gogh)"
+-- local light_scheme = "dayfox"
+local light_scheme = "dawnfox"
 -- local light_scheme = "Catppuccin Latte"
 -- local light_scheme = "Piatto Light"
 -- local light_scheme = "Tokyo Night Day"
-local dark_scheme = "Catppuccin Macchiato"
+-- local dark_scheme = "Catppuccin Macchiato"
+-- local dark_scheme = "Catppuccin Mocha"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Tokyo Night Storm"
+-- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
 -- local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "nightfox"
+local dark_scheme = "duskfox"
 
 if appearance:find("Dark") then
 	scheme = dark_scheme
 else
 	scheme = light_scheme
-	-- Config for light mode
-	-- config.window_frame = {
-	--   inactive_titlebar_fg = '#ccc',
-	--   inactive_titlebar_bg = '#eaeaea',
-	--   active_titlebar_bg = '#eaeaea',
-	--   active_titlebar_fg = '#666',
-	--   active_titlebar_border_bottom = '#eaeaea',
-	--   inactive_titlebar_border_bottom = 'white',
-	--   button_fg = '#666',
-	--   button_bg = '#eaeaea',
-	--   button_hover_fg = '#333',
-	--   button_hover_bg = '#ddd',
-	-- }
-	--
-	-- config.colors = {
-	--   tab_bar = {
-	--     background = '#eee',
-	--
-	--     active_tab = {
-	--       bg_color = '#ddd',
-	--       fg_color = '#666'
-	--     },
-	--
-	--     inactive_tab = {
-	--       bg_color = '#eee',
-	--       fg_color = '#bbb'
-	--     },
-	--     inactive_tab_hover = {
-	--       bg_color = '#bbb',
-	--       fg_color = '#555'
-	--     },
-	--
-	--     new_tab = {
-	--       bg_color = '#efefef',
-	--       fg_color = '#333'
-	--     },
-	--     new_tab_hover = {
-	--       bg_color = '#bbb',
-	--       fg_color = '#555'
-	--     }
-	--   }
-	-- }
 end
 
 wezterm.on("toggle-dark-mode", function(window, pane)
@@ -127,8 +92,7 @@ config.set_environment_variables = {
 }
 
 config.color_scheme = scheme
-config.font = wezterm.font("JetBrains Mono", { weight = "DemiBold" })
--- config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
+config.font = wezterm.font("JetBrains Mono", { weight = "Medium" }) -- weight e.g.: Regular, Medium, DemiBold
 config.font_size = 14
 config.line_height = 1.2
 config.initial_cols = 135

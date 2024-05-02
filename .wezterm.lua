@@ -47,9 +47,9 @@ local scheme = "light"
 -- local light_scheme = "One Light (base16)"
 -- local light_scheme = "Github (base16)"
 -- local light_scheme = "zenbones"
--- local light_scheme = "Rosé Pine Dawn (Gogh)"
+local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local light_scheme = "dayfox"
-local light_scheme = "dawnfox"
+-- local light_scheme = "dawnfox"
 -- local light_scheme = "Catppuccin Latte"
 -- local light_scheme = "Piatto Light"
 -- local light_scheme = "Tokyo Night Day"
@@ -58,13 +58,23 @@ local light_scheme = "dawnfox"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Tokyo Night Moon"
--- local dark_scheme = "Rosé Pine Moon (Gogh)"
+local dark_scheme = "Rosé Pine Moon (Gogh)"
 -- local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "nightfox"
-local dark_scheme = "duskfox"
+-- local dark_scheme = "duskfox"
+
+local light_window_frame = require("lua/rose-pine-dawn").window_frame()
+local light_colors = require("lua/rose-pine-dawn").colors()
+local dark_window_frame = require("lua/rose-pine-moon").window_frame()
+local dark_colors = require("lua/rose-pine-moon").colors()
+
+local window_frame = light_window_frame
+local colors = light_colors
 
 if appearance:find("Dark") then
 	scheme = dark_scheme
+	colors = dark_colors
+	window_frame = dark_window_frame
 else
 	scheme = light_scheme
 end
@@ -74,8 +84,12 @@ wezterm.on("toggle-dark-mode", function(window, pane)
 	local flavour = "dark"
 	if overrides.color_scheme == light_scheme then
 		overrides.color_scheme = dark_scheme
+		overrides.colors = dark_colors
+		overrides.window_frame = dark_window_frame
 	else
 		overrides.color_scheme = light_scheme
+		overrides.colors = light_colors
+		overrides.window_frame = light_window_frame
 		flavour = "light"
 	end
 	window:set_config_overrides(overrides)
@@ -92,6 +106,8 @@ config.set_environment_variables = {
 }
 
 config.color_scheme = scheme
+config.colors = colors
+config.window_frame = window_frame
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium" }) -- weight e.g.: Regular, Medium, DemiBold
 config.font_size = 14
 config.line_height = 1.2

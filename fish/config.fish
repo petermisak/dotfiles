@@ -11,13 +11,11 @@ set -x LANG en_US.UTF8
 # Default editor Vim
 set -xg EDITOR vim
 
-# Macports
-set HOMEBREW_HOME /opt/local
+set HOMEBREW_HOME /usr/local
 if test -d /opt/homebrew
     set HOMEBREW_HOME /opt/homebrew
+    set -xg PATH $HOMEBREW_HOME/bin $HOMEBREW_HOME/sbin $PATH
 end
-
-set -xg PATH $HOMEBREW_HOME/bin $HOMEBREW_HOME/sbin $PATH
 
 # Homebrew Python
 set -xg PATH /usr/local/opt/python/libexec/bin $PATH

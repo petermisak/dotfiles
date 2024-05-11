@@ -63,18 +63,8 @@ local dark_scheme = "Rosé Pine Moon (Gogh)"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "duskfox"
 
-local light_window_frame = require("lua/rose-pine-dawn").window_frame()
-local light_colors = require("lua/rose-pine-dawn").colors()
-local dark_window_frame = require("lua/rose-pine-moon").window_frame()
-local dark_colors = require("lua/rose-pine-moon").colors()
-
-local window_frame = light_window_frame
-local colors = light_colors
-
 if appearance:find("Dark") then
 	scheme = dark_scheme
-	colors = dark_colors
-	window_frame = dark_window_frame
 else
 	scheme = light_scheme
 end
@@ -84,12 +74,8 @@ wezterm.on("toggle-dark-mode", function(window, pane)
 	local flavour = "dark"
 	if overrides.color_scheme == light_scheme then
 		overrides.color_scheme = dark_scheme
-		overrides.colors = dark_colors
-		overrides.window_frame = dark_window_frame
 	else
 		overrides.color_scheme = light_scheme
-		overrides.colors = light_colors
-		overrides.window_frame = light_window_frame
 		flavour = "light"
 	end
 	window:set_config_overrides(overrides)

@@ -48,18 +48,22 @@ local scheme = "light"
 -- local light_scheme = "Github (base16)"
 -- local light_scheme = "zenbones"
 local light_scheme = "Rosé Pine Dawn (Gogh)"
+-- local light_scheme = "Papercolor Light (Gogh)"
 -- local light_scheme = "dayfox"
 -- local light_scheme = "dawnfox"
 -- local light_scheme = "Catppuccin Latte"
 -- local light_scheme = "Piatto Light"
 -- local light_scheme = "Tokyo Night Day"
+-- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Catppuccin Macchiato"
 -- local dark_scheme = "Catppuccin Mocha"
--- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Tokyo Night Moon"
-local dark_scheme = "Rosé Pine Moon (Gogh)"
--- local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "Tokyo Night"
+-- local dark_scheme = "Papercolor Dark (Gogh)"
+-- local dark_scheme = "Rosé Pine Moon (Gogh)"
+local dark_scheme = "Rosé Pine (Gogh)"
+-- -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "duskfox"
 
@@ -92,13 +96,13 @@ config.set_environment_variables = {
 }
 
 config.color_scheme = scheme
-config.colors = colors
-config.window_frame = window_frame
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium" }) -- weight e.g.: Regular, Medium, DemiBold
 config.font_size = 14
 config.line_height = 1.2
 config.initial_cols = 135
 config.initial_rows = 40
+
+config.harfbuzz_features = { "calt=1", "clig=1" }
 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false

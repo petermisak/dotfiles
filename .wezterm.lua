@@ -63,7 +63,7 @@ local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
 local dark_scheme = "Rosé Pine (Gogh)"
--- -- local dark_scheme = "zenbones_dark"
+-- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "duskfox"
 

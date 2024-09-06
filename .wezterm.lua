@@ -61,9 +61,10 @@ end
 local appearance = wezterm.gui.get_appearance()
 local scheme = "light"
 -- local light_scheme = "One Light (base16)"
-local light_scheme = "Github (base16)"
+-- local light_scheme = "Github (base16)"
+-- local light_scheme = "iceberg-light"
 -- local light_scheme = "zenbones"
--- local light_scheme = "Rosé Pine Dawn (Gogh)"
+local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local light_scheme = "Papercolor Light (Gogh)"
 -- local light_scheme = "dayfox"
 -- local light_scheme = "dawnfox"
@@ -77,10 +78,12 @@ local light_scheme = "Github (base16)"
 -- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
+-- local dark_scheme = "iceberg-dark"
 local dark_scheme = "Rosé Pine Moon (Gogh)"
 -- local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
+-- local dark_scheme = "terafox"
 -- local dark_scheme = "duskfox"
 
 if appearance:find("Dark") then
@@ -114,6 +117,7 @@ end)
 
 config.set_environment_variables = {
 	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
+	NVIM_APPNAME = "lazyvim",
 }
 
 config.color_scheme = scheme
@@ -135,6 +139,14 @@ local act = wezterm.action
 
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
+	{
+		key = ",",
+		mods = "SUPER",
+		action = act.SpawnCommandInNewTab({
+			cwd = wezterm.home_dir,
+			args = { " nvim", wezterm.config_file },
+		}),
+	},
 	{ key = "j", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Up") },
 	{ key = "h", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Left") },

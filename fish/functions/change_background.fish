@@ -4,7 +4,7 @@ function change_background --argument mode_setting
     switch $mode_setting
         case light
             yes | fish_config theme save "Snow Day"
-            # yes | fish_config theme save Tomorrow
+            #yes | fish_config theme save Tomorrow
             #yes | fish_config theme save "Catppuccin Latte"
             #yes | fish_config theme save "Rosé Pine Dawn"
             git config --global delta.syntax-theme OneHalfLight

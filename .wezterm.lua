@@ -32,6 +32,22 @@ local function themeCycler(window, _)
 	end
 end
 
+local function escape(file) ---@param file string
+	return file:gsub("[{*\\?]", "\\%1")
+end
+
+---checks if a file exists on the filesystem
+---Abuses wezterm.glob.
+---@param name string? path to the file (relative to CWD)
+---@return boolean exists
+local function file_exists(name)
+	if not name then
+		return false
+	end
+	local res = wezterm.glob(escape(name)) ---@type string[]
+	return res[1] == name
+end
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -45,12 +61,12 @@ end
 local appearance = wezterm.gui.get_appearance()
 local scheme = "light"
 -- local light_scheme = "One Light (base16)"
--- local light_scheme = "Github (base16)"
+local light_scheme = "Github (base16)"
 -- local light_scheme = "zenbones"
 -- local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local light_scheme = "Papercolor Light (Gogh)"
 -- local light_scheme = "dayfox"
-local light_scheme = "dawnfox"
+-- local light_scheme = "dawnfox"
 -- local light_scheme = "Catppuccin Latte"
 -- local light_scheme = "Piatto Light"
 -- local light_scheme = "Tokyo Night Day"
@@ -61,8 +77,8 @@ local light_scheme = "dawnfox"
 -- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
--- local dark_scheme = "Rosé Pine Moon (Gogh)"
-local dark_scheme = "Rosé Pine (Gogh)"
+local dark_scheme = "Rosé Pine Moon (Gogh)"
+-- local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "duskfox"
@@ -83,8 +99,13 @@ wezterm.on("toggle-dark-mode", function(window, pane)
 		flavour = "light"
 	end
 	window:set_config_overrides(overrides)
-	local success, stdout, stderr = wezterm.run_child_process({
-		"/opt/homebrew/bin/fish",
+
+	local fishpath = "/opt/homebrew/bin/fish"
+	if not file_exists(fishpath) then
+		fishpath = "/usr/local/bin/fish"
+	end
+	local success, stdout, stderr = wezterm.background_child_process({
+		fishpath,
 		"-c",
 		"change_background " .. flavour,
 	})

@@ -61,10 +61,10 @@ end
 local appearance = wezterm.gui.get_appearance()
 local scheme = "light"
 -- local light_scheme = "One Light (base16)"
--- local light_scheme = "Github (base16)"
+local light_scheme = "Github (base16)"
 -- local light_scheme = "iceberg-light"
 -- local light_scheme = "zenbones"
-local light_scheme = "Rosé Pine Dawn (Gogh)"
+-- local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local light_scheme = "Papercolor Light (Gogh)"
 -- local light_scheme = "dayfox"
 -- local light_scheme = "dawnfox"
@@ -79,8 +79,8 @@ local light_scheme = "Rosé Pine Dawn (Gogh)"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
 -- local dark_scheme = "iceberg-dark"
-local dark_scheme = "Rosé Pine Moon (Gogh)"
--- local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "Rosé Pine Moon (Gogh)"
+local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "terafox"
@@ -122,7 +122,7 @@ config.set_environment_variables = {
 
 config.color_scheme = scheme
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium" }) -- weight e.g.: Regular, Medium, DemiBold
-config.font_size = 14
+config.font_size = 13.5
 config.line_height = 1.2
 config.initial_cols = 135
 config.initial_rows = 40
@@ -144,7 +144,7 @@ config.keys = {
 		mods = "SUPER",
 		action = act.SpawnCommandInNewTab({
 			cwd = wezterm.home_dir,
-			args = { " nvim", wezterm.config_file },
+			args = { "nvim", wezterm.config_file },
 		}),
 	},
 	{ key = "j", mods = "CMD|SHIFT", action = act.ActivatePaneDirection("Down") },

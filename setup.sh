@@ -109,7 +109,6 @@ fish -c "fisher install h-matsuo/fish-color-scheme-switcher"
 fish -c "fisher install catppuccin/fish"
 fish -c "fisher install vitallium/tokyonight-fish"
 fish -c "fisher install rose-pine/fish"
-fish -c "fisher install rstacruz/fish-asdf"
 
 ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 
@@ -156,6 +155,8 @@ asdf plugin add maven https://github.com/halcyon/asdf-maven.git
 asdf install maven 3.9.2
 asdf install maven 3.6.3
 asdf global maven 3.9.2
+
+asdf completion fish > ~/.config/fish/completions/asdf.fish
 
 brew tap snyk/tap
 brew install snyk

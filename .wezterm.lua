@@ -73,14 +73,14 @@ local light_scheme = "Github (base16)"
 -- local light_scheme = "Tokyo Night Day"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Catppuccin Macchiato"
--- local dark_scheme = "Catppuccin Mocha"
+local dark_scheme = "Catppuccin Mocha"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
 -- local dark_scheme = "iceberg-dark"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
-local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "terafox"
@@ -123,7 +123,7 @@ config.set_environment_variables = {
 config.color_scheme = scheme
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium" }) -- weight e.g.: Regular, Medium, DemiBold
 config.font_size = 13.5
-config.line_height = 1.2
+config.line_height = 1.22
 config.initial_cols = 135
 config.initial_rows = 40
 

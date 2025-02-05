@@ -107,7 +107,9 @@ fish -c "fisher install edc/bass"
 fish -c "fisher install jhillyerd/plugin-git"
 fish -c "fisher install h-matsuo/fish-color-scheme-switcher"
 fish -c "fisher install catppuccin/fish"
+fish -c "fisher install vitallium/tokyonight-fish"
 fish -c "fisher install rose-pine/fish"
+fish -c "fisher install rstacruz/fish-asdf"
 
 ln -sf $(pwd)/starship/starship.toml "$HOME/.config/starship.toml"
 

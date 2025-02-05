@@ -10,9 +10,12 @@ function change_background --argument mode_setting
             git config --global delta.syntax-theme OneHalfLight
             set mode light
         case dark
+            #yes | fish_config theme save "Catppuccin Frappe"
             #yes | fish_config theme save "Catppuccin Macchiato"
+            yes | fish_config theme save "Catppuccin Mocha"
+            #yes | fish_config theme save "TokyoNight Moon"
             #yes | fish_config theme save "Rosé Pine Moon"
-            yes | fish_config theme save "Rosé Pine"
+            #yes | fish_config theme save "Rosé Pine"
             git config --global delta.syntax-theme zenburn
             set mode dark
     end

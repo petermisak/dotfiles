@@ -64,10 +64,6 @@ complete --command aws --no-files --arguments '(begin; set --local --export COMP
 # 1password completions
 op completion fish | source
 
-# asdf
-
-source $HOMEBREW_HOME/opt/asdf/libexec/asdf.fish
-
 # Fish syntax highlighting
 # scheme set default
 
@@ -109,7 +105,7 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 
 # set -xg FZF_DEFAULT_OPTS (_gen_fzf_default_opts)
 set -xg FZF_DEFAULT_OPTS --height 40% --color light
-# set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
+#set -xg FZF_DEFAULT_OPTS --height 40% --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229,info:150,prompt:110,spinner:150,pointer:167,marker:174
 
 # exa/eza colors
 set -x EXA_COLORS "uu=0:gu=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0"

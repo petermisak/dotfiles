@@ -73,14 +73,14 @@ local light_scheme = "Github (base16)"
 -- local light_scheme = "Tokyo Night Day"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Catppuccin Macchiato"
-local dark_scheme = "Catppuccin Mocha"
+-- local dark_scheme = "Catppuccin Mocha"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
 -- local dark_scheme = "iceberg-dark"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
--- local dark_scheme = "Rosé Pine (Gogh)"
+local dark_scheme = "Rosé Pine (Gogh)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "terafox"
@@ -129,7 +129,7 @@ config.initial_rows = 40
 
 config.harfbuzz_features = { "calt=1", "clig=1" }
 
-config.hide_tab_bar_if_only_one_tab = true
+-- config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 -- config.window_background_opacity = 0.95
 -- config.macos_window_background_blur = 10
@@ -171,5 +171,20 @@ config.keys = {
 	-- Switch color schemes via keyboard shortcut
 	{ key = "m", mods = "CMD|SHIFT", action = wezterm.action({ EmitEvent = "toggle-dark-mode" }) },
 }
+
+-- Plugins
+local theme = wezterm.plugin.require("https://github.com/neapsix/wezterm").main
+config.colors = theme.colors()
+config.window_frame = theme.window_frame()
+
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+tabline.setup({
+	options = {
+		theme = "Rosé Pine (base16)",
+	},
+	sections = {
+		tabline_y = { "battery" },
+	},
+})
 
 return config

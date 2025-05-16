@@ -143,18 +143,10 @@ mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 sudo chown -R $USER /opt/local/lib/node_modules
 
-brew install asdf
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs latest
-asdf global nodejs latest
-asdf plugin add java https://github.com/halcyon/asdf-java.git
-asdf install java temurin-17.0.7+7
-asdf install java temurin-8.0.372+7
-asdf global java temurin-17.0.7+7
-asdf plugin add maven https://github.com/halcyon/asdf-maven.git
-asdf install maven 3.9.2
-asdf install maven 3.6.3
-asdf global maven 3.9.2
+brew install mise
+mise use -g java@temurin-21.0.4+7.0.LTS
+mise use -g maven@3.9.6
+mise use -g node@21.1.0
 
 asdf completion fish > ~/.config/fish/completions/asdf.fish
 
@@ -223,4 +215,6 @@ brew tap espanso/espanso
 brew install espanso
 rm -rf ~/Library/Preferences/espanso
 ln -sf $(pwd)/espanso "$HOME/Library/Preferences"
+
+brew install kepubify
 

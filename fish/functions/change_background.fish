@@ -6,13 +6,13 @@ function change_background --argument mode_setting
             yes | fish_config theme save "Snow Day"
             #yes | fish_config theme save Tomorrow
             #yes | fish_config theme save "Catppuccin Latte"
-            #yes | fish_config theme save "Rosé Pine Dawn"
+            # yes | fish_config theme save "Rosé Pine Dawn"
             git config --global delta.syntax-theme OneHalfLight
             set mode light
         case dark
             #yes | fish_config theme save "Catppuccin Frappe"
             #yes | fish_config theme save "Catppuccin Macchiato"
-            #yes | fish_config theme save "Catppuccin Mocha"
+            # yes | fish_config theme save "Catppuccin Mocha"
             #yes | fish_config theme save "TokyoNight Moon"
             #yes | fish_config theme save "Rosé Pine Moon"
             yes | fish_config theme save "Rosé Pine"

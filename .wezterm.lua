@@ -173,17 +173,25 @@ config.keys = {
 }
 
 -- Plugins
+--
+-- Rosé Pine plugin
 local theme = wezterm.plugin.require("https://github.com/neapsix/wezterm").main
 config.colors = theme.colors()
 config.window_frame = theme.window_frame()
 
+-- Tabline plugin
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
 	options = {
+		-- theme = "Catppuccin Mocha",
+		-- theme = "Github (base16)",
 		theme = "Rosé Pine (base16)",
+		-- theme = "Rosé Pine Moon (base16)",
+		-- theme = "Rosé Pine Dawn (base16)",
 	},
 	sections = {
 		tabline_y = { "battery" },
+		tabline_z = { "hostname" },
 	},
 })
 

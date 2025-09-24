@@ -73,14 +73,15 @@ local light_scheme = "Github (base16)"
 -- local light_scheme = "Tokyo Night Day"
 -- local dark_scheme = "Catppuccin Frappe"
 -- local dark_scheme = "Catppuccin Macchiato"
--- local dark_scheme = "Catppuccin Mocha"
+local dark_scheme = "Catppuccin Mocha"
 -- local dark_scheme = "Tokyo Night Storm"
 -- local dark_scheme = "Tokyo Night Moon"
 -- local dark_scheme = "Tokyo Night"
 -- local dark_scheme = "Papercolor Dark (Gogh)"
 -- local dark_scheme = "iceberg-dark"
 -- local dark_scheme = "Rosé Pine Moon (Gogh)"
-local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "Rosé Pine (Gogh)"
+-- local dark_scheme = "Black Metal (Bathory) (base16)"
 -- local dark_scheme = "zenbones_dark"
 -- local dark_scheme = "nightfox"
 -- local dark_scheme = "terafox"
@@ -91,6 +92,9 @@ if appearance:find("Dark") then
 else
 	scheme = light_scheme
 end
+
+-- force dark scheme for now
+scheme = dark_scheme
 
 wezterm.on("toggle-dark-mode", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
@@ -175,17 +179,19 @@ config.keys = {
 -- Plugins
 --
 -- Rosé Pine plugin
-local theme = wezterm.plugin.require("https://github.com/neapsix/wezterm").main
-config.colors = theme.colors()
-config.window_frame = theme.window_frame()
+-- local theme = wezterm.plugin.require("https://github.com/neapsix/wezterm").main
+-- config.colors = theme.colors()
+-- config.window_frame = theme.window_frame()
 
 -- Tabline plugin
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
 	options = {
-		-- theme = "Catppuccin Mocha",
+		theme = "Catppuccin Mocha",
+		-- theme = "Catppuccin Macchiato",
 		-- theme = "Github (base16)",
-		theme = "Rosé Pine (base16)",
+		-- theme = "Rosé Pine (base16)",
+		-- theme = "Black Metal (Bathory) (base16)",
 		-- theme = "Rosé Pine Moon (base16)",
 		-- theme = "Rosé Pine Dawn (base16)",
 	},

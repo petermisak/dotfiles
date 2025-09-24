@@ -146,7 +146,7 @@ sudo chown -R $USER /opt/local/lib/node_modules
 brew install mise
 mise use -g java@temurin-21.0.4+7.0.LTS
 mise use -g maven@3.9.6
-mise use -g node@21.1.0
+mise use -g node@24.4.1
 
 asdf completion fish > ~/.config/fish/completions/asdf.fish
 
@@ -217,4 +217,7 @@ rm -rf ~/Library/Preferences/espanso
 ln -sf $(pwd)/espanso "$HOME/Library/Preferences"
 
 brew install kepubify
+
+brew tap atlassian/homebrew-acli
+brew install acli
 
